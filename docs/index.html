@@ -94,14 +94,14 @@
 	<script>
 		var doc = document;
 		var width = screen.width;
-		var height = screen.height;
+		// var height = screen.height;
+		var height = document.body.clientHeight;
 		doc.querySelector('#modalContent').style = 'height:' + height + 'px;width:' + width + 'px;';
-		doc.querySelector('#confirmBtn').style = 'width:' + width*0.6 + 'px;margin-left:' + width*0.2 +'px;';
 		var btn = doc.getElementById('btn');
 		btn.addEventListener('click', function () {
 			window.history.back();
 		})
-		var styleText = "#modalContent{position:relative;background-color:#fff;border-radius:1%;} #textContent {height: 90%;overflow: scroll;padding: 0 10px;} #confirmBtn {background-color: #fff;position: fixed; bottom:0h;height: 64px;}#btn {width: 60%;height: 60%;border-radius: 3%;border: none;margin-left: 20%;background-color: #5f9ffb;color: #fff;font-size: 14px; margin-top: 3%;}"
+		var styleText = "#modalContent{position:relative;background-color:#fff;border-radius:1%;} #textContent {height: 90%;overflow: scroll;padding: 0 10px;} #confirmBtn {height: 10%;background-color: #fff;}#btn {width: 60%;height: 60%;border-radius: 3%;border: none;margin-left: 20%;background-color: #5f9ffb;color: #fff;font-size: 14px; margin-top: 3%;}"
 		var head = doc.getElementsByTagName("head")[0];
 		var styleElement = doc.createElement('style');
 		styleElement.setAttribute("type", "text/css");
