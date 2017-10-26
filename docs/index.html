@@ -3,7 +3,7 @@
 <head>
     <style type="text/css">
         .modalContent {
-            height: 90%;
+            height: 100%;
             position: relative;
             top: 5%;
             background-color: #fff;
@@ -46,20 +46,23 @@
             margin-top: 3%
         }
 
-        #iframeBox {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            display: none
-        }
-
         body {
             margin: 0
         }
         #confirmBtn {
-            height: 10%;
+			height: 10%; 
+			background-color: #fff;
         }
+		#btn {
+			width: 60%;
+			height: 60%;
+			order-radius: 3%;
+			margin-left: 20%;
+			background-color: #5f9ffb;
+			color: #fff;
+			font-size: 14px; 
+			margin-top: 3%
+		}
     </style>
 </head>
 <body>
@@ -126,7 +129,11 @@
         </div>
     </div>
     <script>
-       var btn = document.getElementById('btn');
+		var doc =	document;
+		var width = screen.width;
+		var height = screen.height;
+		document.body.style = 'height:' + height + 'px;width:' + width + 'px;';
+       var btn = doc.getElementById('btn');
        btn.addEventListener('click', function(){
            window.history.back();
        })
