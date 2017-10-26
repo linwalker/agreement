@@ -94,8 +94,8 @@
 	<script>
 		var doc = document;
 		var width = screen.width;
-		// var height = screen.height;
-		var height = document.body.clientHeight;
+		var height = screen.availHeight;
+
 		doc.querySelector('#modalContent').style = 'height:' + height + 'px;width:' + width + 'px;';
 		var btn = doc.getElementById('btn');
 		btn.addEventListener('click', function () {
