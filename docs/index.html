@@ -29,8 +29,8 @@
 </head>
 
 <body>
-	<div class="modalContent">
-		<div class="textContent">
+	<div id="modalContent">
+		<div id="textContent">
 			<h3>用户使用协议</h3>
 			<h5>数据采集服务协议</h5>
 			<p>本数据采集服务（以下简称“本服务”）由杭州信川科技有限公司（以下简称“信川科技”）提供。请在使用本服务前认真阅读、充分理解本协议各条款,特别是涉及到您重大权益或权利与义务的条款，包括但不限于：与您约定免除或者限制责任的条款；与您约定法律适用和管辖的条款；以粗体下划线标识的重要条款；其他涉及您重大权益或权利与义务的条款。</p>
@@ -95,12 +95,12 @@
 		var doc = document;
 		var width = screen.width;
 		var height = screen.height;
-		doc.querySelector('.modalContent').style = 'height:' + height + 'px;width:' + width + 'px;';
+		doc.querySelector('#modalContent').style = 'height:' + height + 'px;width:' + width + 'px;';
 		var btn = doc.getElementById('btn');
 		btn.addEventListener('click', function () {
 			window.history.back();
 		})
-		var styleText = ".modalContent{position:relative;background-color:#fff;border-radius:1%;}.textContent {height: 90%;overflow: scroll;padding: 0 10px;} #confirmBtn {height: 10%;background-color: #fff;}#btn {width: 60%;height: 60%;border-radius: 3%;border: none;margin-left: 20%;background-color: #5f9ffb;color: #fff;font-size: 14px; margin-top: 3%;}"
+		var styleText = "#modalContent{position:relative;background-color:#fff;border-radius:1%;} #textContent {height: 90%;overflow: scroll;padding: 0 10px;} #confirmBtn {height: 10%;background-color: #fff;}#btn {width: 60%;height: 60%;border-radius: 3%;border: none;margin-left: 20%;background-color: #5f9ffb;color: #fff;font-size: 14px; margin-top: 3%;}"
 		var head = doc.getElementsByTagName("head")[0];
 		var styleElement = doc.createElement('style');
 		styleElement.setAttribute("type", "text/css");
