@@ -104,7 +104,8 @@
 		var head = doc.getElementsByTagName("head")[0];
 		var styleElement = doc.createElement('style');
 		styleElement.setAttribute("type", "text/css");
-		styleElement.innerText = styleText
+		styleElement.innerText = styleText;
+		head.appendChild(styleElement);
 	</script>
 
 </body>
